@@ -1,0 +1,17 @@
+version: '3.8'
+
+services:
+  # Утилитарный контейнер для сетевой диагностики и SNMP v3 проверки
+  snmp-tester:
+    image: alpine:latest
+    container_name: snmp_v3_tester
+    command: >
+      sh -c "apk add --no-cache net-snmp-tools && tail -f /dev/null"
+    networks:
+      - monitoring-net
+    volumes:
+      - ./mikroTik:/app/config
+
+networks:
+  monitoring-net:
+    driver: bridge

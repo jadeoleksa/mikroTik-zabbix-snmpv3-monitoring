@@ -9,8 +9,7 @@ Production-ready configuration guides, templates, and automation examples for se
 
 ## Repository Structure
 * `mikroTik/` — CLI configuration commands and security profiles for RouterOS.
-* `zabbix/` — Exported templates and macro configurations for SNMP v3 polling.
-* `docs/` — Architecture schemas and verification workflows.
+* `docker-compose.yml` — Utility container for SNMP v3 network diagnostics and verification.
 
 ## Key Security & Implementation Highlights
 1. **Strict User Isolation:** Configuring `authPriv` security levels on MikroTik devices.
